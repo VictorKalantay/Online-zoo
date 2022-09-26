@@ -758,12 +758,14 @@ body {
     line-height: 140%;
     padding: 10px;
     color: #BDBDBD;
+    outline: none;
 }
 
 .subscribe-input:focus {
     background-color: transparent;
     color: #d31414;
     border-color: #d31414;
+    outline: none;
 }
 .subscribe-input:valid {
     background-color: transparent;
