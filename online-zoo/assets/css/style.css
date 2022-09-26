@@ -65,6 +65,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
+    cursor: pointer;
 }
 .main__button:hover, .footer .main__button:hover {
     background:  #E47209;
@@ -289,6 +290,7 @@ body {
     color: black;
     border-radius: 5px;
     transition: 1s;
+    cursor: pointer;
 }
 .backstage__card:hover {
     box-shadow: 0 0 10000px 10000px rgba(0, 0, 0, 0.5);
@@ -627,6 +629,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .request__scroll-bar--inner {
     position: relative;
@@ -755,12 +758,14 @@ body {
     line-height: 140%;
     padding: 10px;
     color: #BDBDBD;
+    outline: none;
 }
 
 .subscribe-input:focus {
     background-color: transparent;
     color: #d31414;
     border-color: #d31414;
+    outline: none;
 }
 .subscribe-input:valid {
     background-color: transparent;

@@ -292,6 +292,7 @@ input[type="number"] {
 .custom-radio-btn {
     position: relative;
     display: inline-block;
+    box-sizing: border-box;
     width: 16px;
     height: 16px;
     background: transparent;
@@ -306,9 +307,9 @@ input[type="number"] {
 .custom-radio-btn::before {
     content: '';
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #a3a4a7;
+    width: 16px;
+    height: 16px;
+    background: #4B9200;
     border-radius: 50%;
 
     position: absolute;
