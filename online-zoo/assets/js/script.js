@@ -20,7 +20,7 @@ changeDotClass()
 
 
 const iconBurger = document.querySelector('.header__burger');
-const navMenu = document.querySelector('.nav__container');
+const navMenu = document.querySelector('.header .nav__container');
 const logo = document.querySelector('.logo__container')
 const currentLink = document.querySelector('.nav__link--current')
 if (iconBurger) {
@@ -37,3 +37,6 @@ if (iconBurger.classList.contains('active')) { //Если бургер разв�
     navMenu.classList.remove('active');
     logo.classList.remove('active')
 }
+
+//------------------------------
+//alert('Адаптив на брейкпоинтах: 1000px, 640px, 320px')
