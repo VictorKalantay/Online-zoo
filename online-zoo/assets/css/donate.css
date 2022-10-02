@@ -77,6 +77,9 @@
     gap: 89px;
     margin-bottom: 48px;
 }
+.feed__diet svg {
+    flex: 0 0 auto;
+}
 
 .feed__diet-container {
     display: flex;
