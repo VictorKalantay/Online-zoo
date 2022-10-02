@@ -115,6 +115,7 @@
 
     .request__container {
         padding-top: 102px;
+
     }
 
     .request__title {
@@ -174,10 +175,71 @@
         display: flex;
     }
 
+    .container.footer__container {
+        padding-right: 20px;
+        padding-left: 30px;
+        max-width: 1000px;
+        overflow: hidden;
+    }
     .footer__copyright {
         position: relative;
         left: 20px;
     }
+
+    .panda-block {
+        overflow: hidden;
+        height: 390px;
+    }
+    .panda-block img {
+        width: 126%;
+    }
+
+
+    .donate {
+        height: 1333px;
+    }
+    .donate__title {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    .feed__info {
+        margin-bottom: 39px;
+    }
+    .feed__block {
+        padding: 21px 49px 20px 35px;
+        height: 919px;
+    }
+    .feed__title {
+        margin-bottom: 13px;
+    }
+    .pay__container {
+        align-self: center;
+    }
+    .pay__title {
+        padding-left: 43px;
+    }
+    .pay__line {
+        left: 42px;
+        width: 810px;
+    }
+    .pay__line:after {
+        width: 775px;
+        left: 20px;
+    }
+    .pay__line-block {
+        padding-left: 13px;
+    }
+    .pay__point:first-child {
+        display: none;
+    }
+    .pay__cost {
+        padding-left: 26px;
+    }
+    .radio-container {
+        gap: 48px;
+    }
+
+
 }
 
 @media (max-width: 1000px) {
@@ -460,10 +522,11 @@
         height: 282px;
     }
 
-    .footer__container {
+    .footer__container.container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 12px 0;
+        padding: 12px 8px 12px 20px;
+        max-width: 640px;
 
     }
 
@@ -473,6 +536,7 @@
         grid-template-areas: 'l s'
                              'b s';
         height: 164px;
+        justify-content: space-between;
     }
     .footer .logo__container {
         grid-area: l;
@@ -494,9 +558,7 @@
     .footer .social-name {
         display: none;
     }
-    .footer .main__button {
-        margin-right: 275px;
-    }
+
     .footer .nav__container {
         margin-left: 0;
         margin-right: 32px;
@@ -508,6 +570,86 @@
         align-self: flex-end;
     }
 
+    .panda-block {
+        height: 369px;
+    }
+
+    .donate {
+        padding-top: 29px;
+    }
+    .donate__title {
+        font-size: 24px;
+        width: 100%;
+        margin-bottom: 18px;
+    }
+    .donate__text {
+        margin-bottom: 32px;
+    }
+    .feed__info {
+        margin-bottom: 30px;
+    }
+    .feed__block {
+        padding:  31px 0 20px;
+    }
+    .feed__title {
+        padding-left: 10px;
+        margin-bottom: 22px;
+    }
+    .feed__subtitle {
+        text-align: center;
+        margin-left: 6px;
+        margin-bottom: 50px;
+        padding: 0 15px;
+    }
+    .feed__diet-container {
+        margin-left: -10px;
+        padding-top: 55px;
+    }
+    .pay__container {
+        width: 600px;
+        margin-bottom: 49px;
+    }
+    .pay__line-block {
+        gap: 0;
+        padding-left: 0;
+    }
+    .pay__line {
+        width: 100%;
+        left: 0;
+        top: 28px;
+    }
+    .pay__line:after {
+        width: 580px;
+    }
+    .pay__title {
+        padding-left: 10px;
+        margin-bottom: -7px;
+    }
+    .pay__point:nth-child(2), .pay__point:nth-child(3) {
+        display: none;
+    }
+    .feed__diet {
+        margin-bottom: 42px;
+    }
+    .feed__input {
+        width: 180px;
+        height: 42px;
+        margin-left: -18px;
+        margin-bottom: 31px;
+    }
+    .radio-container {
+        padding-left: 28px;
+    }
+    .feed__submit {
+        margin-left: -15px;
+    }
+    .feed__form:after {
+        top: 8px;
+        right: 80px;
+    }
+    .pay__cost {
+        padding-left: 10px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -864,12 +1006,12 @@
         height: 334px;
     }
 
-    .footer__container {
+    .footer__container.container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 7px;
-        padding-bottom: 20px;
+        padding: 7px 10px 20px;
+
     }
 
     .footer__logo-block {
@@ -905,7 +1047,7 @@
 
     }
     .footer .nav__menu {
-        padding-left: 21px;
+        padding-left: 11px;
         gap: 30px;
     }
     .footer__copyright {
@@ -914,7 +1056,136 @@
         font-size: 15px;
         gap: 12px;
     }
+    .panda-block {
+        height: 222px;
 
+    }
+    .donate {
+        height: 1145px;
+    }
+    .donate__container {
+        padding: 0 10px;
+    }
+    .donate__text {
+        margin-bottom: 30px;
+    }
+    .feed__info {
+         font-size: 24px;
+    }
+    .feed__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+    .feed__subtitle {
+        font-size: 16px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 0;
+        line-height: 140%;
+
+    }
+    .feed__block {
+        padding-top: 20px;
+        height: 590px;
+    }
+    .feed__diet-container {
+        padding-left: 0;
+        padding-top: 32px;
+        margin-left: 0;
+        gap: 8px;
+
+    }
+    .feed__diet {
+        gap: 50px;
+        margin-bottom: 4px;
+    }
+    .feed__diet svg:first-of-type {
+        width: 160px;
+        height: 139px;
+    }
+
+    .feed__diet-day {
+        font-size: 40px;
+    }
+    .feed__diet-caption {
+        font-size: 9px;
+    }
+    .multiply-ico {
+        width: 8px;
+        height: 8px;
+        left: 96px;
+    }
+    .pay__container {
+        width: 300px;
+        margin-bottom: 24px;
+    }
+    .pay__title {
+        padding-left: 0;
+        margin-bottom: 1px;
+    }
+    .pay__line {
+        height: 13px;
+        top: 30px;
+    }
+    .pay__line:after {
+        width: 262px;
+        height: 1px;
+        top: 7px;
+    }
+    .pay__cost  {
+        font-size: 13px;
+        padding-left: 5px;
+    }
+    .pay__dot {
+        width: 40px;
+        height: 25px;
+    }
+    .pay__inner-dot {
+        width: 5px;
+        height: 5px;
+    }
+    .pay__dot.active .pay__inner-dot:after {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #FE9013;
+        transform: translate(-28%, -28%);
+        top: 0;
+        left: 0;
+    }
+    .pay__dot.active .pay__inner-dot:before {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #FE9013;
+        transform: translate(-36%, -37%);
+        top: 0;
+        left: 0;
+    }
+    .pay__point {
+        width: 40px;
+    }
+    .feed__input {
+        margin-bottom: 26px;
+    }
+    .radio-container {
+        padding-left: 23px;
+        gap: 47px;
+        margin-bottom: 29px;
+    }
+    .custom-radio-btn {
+        margin-right: 7px;
+    }
+    .feed__submit {
+        margin-left: -20px;
+    }
+    .feed__share {
+        padding-left: 0;
+        margin-left: -1px;
+    }
+    .feed__form:after {
+        top: 8px;
+        right: 70px;
+    }
 }
 
 
