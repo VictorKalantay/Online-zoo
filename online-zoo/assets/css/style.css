@@ -79,6 +79,11 @@ body {
 
 }
 
+.header__area {
+    display: none;
+}
+
+
 .logo__container {
     position: relative;
     display: flex;
@@ -126,7 +131,7 @@ body {
     justify-content: space-between;
     padding: 0;
     gap: 58px;
-    margin-right: auto;
+    margin-right: 15px;
 }
 
 
