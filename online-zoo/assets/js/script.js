@@ -1,6 +1,8 @@
 const dotsCollection = document.querySelectorAll('.pay__dot')
 const inputField = document.querySelector('.feed__input')
-inputField.value = 100
+if (inputField) {
+    inputField.value = 100
+}
 let currentSum
 const changeDotClass = () => {
     dotsCollection.forEach(dot => {
@@ -16,19 +18,19 @@ const changeDotClass = () => {
             inputField.value = currentSum
         })
     })
-    inputField.addEventListener('input', () => {
-       inputField.value = inputField.value.slice(0, 4)
-        dotsCollection.forEach(dot => {
-            dot.classList.remove('active')
-                     if(inputField.value === dot.getAttribute('data-pay')) {
+    if (inputField) {
+        inputField.addEventListener('input', () => {
+            inputField.value = inputField.value.slice(0, 4)
+            dotsCollection.forEach(dot => {
+                dot.classList.remove('active')
+                if (inputField.value === dot.getAttribute('data-pay')) {
 
-                         dot.classList.add('active')
+                    dot.classList.add('active')
 
-                     }
+                }
+            })
         })
-    })
-
-
+    }
 
 
 }
@@ -73,7 +75,6 @@ if (iconBurger.classList.contains('active')) { //Если бургер разв�
 
 
 }
-
 
 
 //------------------------------
