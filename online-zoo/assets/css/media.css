@@ -619,7 +619,8 @@
         top: 28px;
     }
     .pay__line:after {
-        width: 580px;
+        left: 40px;
+        width: 520px;
     }
     .pay__title {
         padding-left: 10px;
@@ -680,16 +681,27 @@
         transition: all 0.5s;
     }
 
-    .logo__img {
+    .header .logo__img {
         width: auto;
         height: 15px;
         top: 22px;
-        left: -2px;
+        left: -5px;
     }
 
     .header__container {
         justify-content: space-between;
         padding: 0 20px;
+    }
+    .header__container .header__area.active {
+        top: 20px;
+        left: 0;
+        display: block;
+        width: 100vw;
+
+        height: 100vh;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 3;
     }
 
     .header__burger {
@@ -804,6 +816,7 @@
     .header .nav__container.active {
         top: 0;
         transition: all 0.5s;
+        z-index: 18;
     }
 
 
@@ -1131,7 +1144,7 @@
     .pay__line:after {
         width: 262px;
         height: 1px;
-        top: 7px;
+        top: 6px;
     }
     .pay__cost  {
         font-size: 13px;
