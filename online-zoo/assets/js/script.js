@@ -75,7 +75,32 @@ if (iconBurger.classList.contains('active')) { //Если бургер разв�
 
 
 }
+//---- Слайдер---------------------------------------------------
+const prevBt = document.querySelector('.cards-button.prev')
+const nextBt = document.querySelector('.cards-button.next')
+const allCards = document.querySelectorAll('.backstage__card')
+let currentIndex = 0
+if(prevBt) {
+    prevBt.addEventListener('click', () => {
+        const windowInnerWidth = window.innerWidth
+        console.log('prev click')
+        console.log(windowInnerWidth)
+        if(windowInnerWidth > 640) {
+            let arrFromDom = Array.from(allCards)
+            console.log(arrFromDom)
+        }
+//получили массив....финдим первый с эктив классом.....берем его индекс...финдим посл. без эктив. меняим у них классы....для превиуса наоборот...посл
 
 
+        allCards.forEach((card, index) => {
+
+
+
+
+
+        })
+
+    })
+}
 //------------------------------
 alert('Адаптив на брейкпоинтах: 1000px, 640px, 320px')
