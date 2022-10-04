@@ -160,7 +160,7 @@
 
     .subscribe-form {
         position: relative;
-        right: 83px;
+        right: 98px;
     }
 
     .footer__aside-container {
@@ -1145,6 +1145,7 @@
         width: 262px;
         height: 1px;
         top: 6px;
+        left: 20px
     }
     .pay__cost  {
         font-size: 13px;
