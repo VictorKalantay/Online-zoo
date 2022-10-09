@@ -17,6 +17,9 @@ body {
     margin: 0;
     font-style: normal;
 }
+body.scroll-lock {
+    overflow-y: hidden;
+}
 
 .container {
     position: relative;
@@ -76,7 +79,6 @@ body {
     justify-content: flex-start;
     align-items: center;
     font-weight: 500;
-
 }
 
 .header__area {
@@ -131,7 +133,7 @@ body {
     justify-content: space-between;
     padding: 0;
     gap: 58px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 
@@ -150,6 +152,7 @@ body {
     position: absolute;
     width: 100%;
     max-height: 780px;
+    min-height: 720px;
     object-fit: cover;
 }
 
@@ -203,13 +206,9 @@ body {
     padding-top: 140px;
     overflow: hidden;
 }
-
-
 .backstage__content {
-    position: relative;
-    padding: 0 80px;
+    padding: 0 90px;
 }
-
 .backstage__flower {
     position: absolute;
 }
@@ -273,22 +272,22 @@ body {
     line-height: 120%;
     margin-bottom: 34px;
 }
-.backstage__content {
+main.backstage__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.backstage__cards {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 80px;
+    min-width: 0;
+}
+.swiper-wrapper.backstage__cards {
+    position: relative;
     width: 100%;
     justify-items: center;
     row-gap: 20px;
-
 }
 
-.backstage__card {
+main.backstage__card {
     position: relative;
     width: 366px;
     box-sizing: content-box;
@@ -310,6 +309,7 @@ body {
     border: 1px solid #F9804B;
     border-radius: 5px;
     height: 366px;
+    overflow: hidden;
 }
 
 .backstage__card-image img {
@@ -325,7 +325,7 @@ body {
 .backstage__card-caption {
     position: relative;
     box-sizing: border-box;
-    width: 366px;
+    width: 100%;
     height: 58px;
     padding-top: 6px;
     padding-left: 15px;
@@ -380,8 +380,8 @@ body {
     background-color: #F9804B;
     border-radius: 50%;
     z-index: 4;
-    transform: translate(-51%, -53%);
-    top: 50%;
+    transform: translate(-51%, -44%);
+    top: 60%;
     cursor: pointer;
 }
 .cards-button:hover {
@@ -400,11 +400,11 @@ body {
 }
 
 .cards-button.prev {
-    left: -50px;
+    left: 39px;
 }
 
 .cards-button.next {
-    right: -110px;
+    right: -22px;
 }
 
 .backstage .main__button {
@@ -412,6 +412,7 @@ body {
     transform: translate(-50%, 0);
     left: 149px;
     top: 80px;
+    margin: 0 auto;
 }
 
 
@@ -534,6 +535,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-top: 142px;
+    min-width: 0;
 }
 
 .request__title {
@@ -547,15 +549,23 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0;
+    max-width: 1164px;
+    overflow: hidden;
+    margin: 0 auto;
+
+
 }
 .request__cards {
-    display: flex;
-    gap: 30px;
+
+
     margin-bottom: 21px;
+    min-width: 0;
+    width: 600px;
 
 }
 
-.request__card {
+.request .request__card {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -641,15 +651,13 @@ body {
     display: block;
     margin: 0 auto 30px;
     cursor: pointer;
-}
-.request__scroll::-webkit-slider-thumb {
-    border-radius: 5px;
-    -webkit-appearance: none;
-    appearance: none;
-    width: 115px;
     height: 6px;
-    background: #F9804B;
+    background: #F5F7F6;
     cursor: pointer;
+}
+.request__scroll .swiper-scrollbar-drag {
+    cursor: pointer;
+    background-color: #FE9013;
 }
 
 .request__scroll:before {
@@ -837,3 +845,77 @@ body {
 
 
 
+.swiper-container {
+    max-width: 1158px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.swiper-wrapper {
+    width: 100%;
+}
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    gap: 20px;
+}
+
+
+/*--------POPUP------------------------------------------------------*/
+
+.popup__wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    top: -1000%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 105;
+}
+
+
+
+.popup__wrapper.active {
+    position: fixed;
+    display: flex;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+
+}
+.popup__wrapper.active.visibility {
+    opacity: 1;
+    transition: all 0.5s;
+
+}
+.popup__content {
+
+    position: relative;
+    width: 267px;
+    height: 391px;
+    background-image: linear-gradient(315.75deg, rgba(254, 189, 171, 1) 30.06%, rgba(243, 169, 248, 1) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup__content .card__wrapper {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    overflow: hidden;
+}
+.popup__content .request__card-text {
+    height: 325px;
+}
+.popup__close {
+    position: absolute;
+    top: 37%;
+    left: calc(50% + 94px);
+    z-index: 120;
+}
